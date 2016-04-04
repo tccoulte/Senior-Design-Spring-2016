@@ -41,7 +41,7 @@ class Top_Block_Senior_Design(gr.top_block):
         # Transmit And Recieve Blocks
         ##################################################
         self.tx_path = transmit_path(tx_gain = tx_gain_t, samps_per_sym = samps_per_sym_t,
-                                    pay_len = self.pay_len_t, freq = freq_t, 
+                                    pay_len = pay_len_t, freq = freq_t, 
                                     samp_rate = samp_rate_t, ampl = ampl_t, file_source = file_source_t)
         self.rx_path = receive_path(rx_gain = rx_gain_t, samps_per_sym = samps_per_sym_t, 
                                     samp_rate = samp_rate_t, freq = freq_t, file_sink = file_sink_t,
@@ -189,13 +189,15 @@ class Top_Block_Senior_Design(gr.top_block):
     def get_ampl(self):
         return self.ampl
 
-    def set_ampl_rx(self, ampl,global):
+    def set_ampl_rx(self, ampl,globl):
         self.rx_path.set_ampl(ampl)
-        self.set_ampl(ampl) if glbal is True
+        if globl is True:
+            self.set_ampl(ampl) 
 
-    def set_ampl_tx(self, ampl,global):
+    def set_ampl_tx(self, ampl,globl):
         self.tx_path.set_ampl(ampl)
-        self.set_ampl(ampl) if glbal is True
+        if globl is True:
+            self.set_ampl(ampl) 
 
 # END TOP_BLOCK_SENIOR_DESIGN
 
@@ -280,7 +282,7 @@ class transmit_path(gr.hier_block2):
     def close_file(self):
         self.blocks_file_source_0.close()
 
-    def open_file(self, repeat = false):
+    def open_file(self, repeat = False):
         self.blocks_file_source_0.open(self.file_source,repeat)
 
     def write_to_file(self, message_string, repeat_nunber):
@@ -291,7 +293,7 @@ class transmit_path(gr.hier_block2):
     
     # Getters and Setters
 
-     def set_repeat(self, repeat_bool):
+    def set_repeat(self, repeat_bool):
         self.close_file()
         self.open_file(repeat_bool)
 
