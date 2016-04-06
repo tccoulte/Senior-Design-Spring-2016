@@ -1,6 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
-
+from gnuradio import filter
 from gnuradio import blocks
 from gnuradio import digital
 from gnuradio import eng_notation
@@ -43,7 +43,7 @@ class Top_Block_Senior_Design(gr.top_block):
         self.tx_path = transmit_path(tx_gain = tx_gain_t, samps_per_sym = samps_per_sym_t,
                                     pay_len = pay_len_t, freq = freq_t, 
                                     samp_rate = samp_rate_t, ampl = ampl_t, file_source = file_source_t)
-        self.rx_path = receive_path(rx_gain = rx_gain_t, samps_per_sym = samps_per_sym_t, 
+        self.rx_path = receive_path(samps_per_sym = samps_per_sym_t, 
                                     samp_rate = samp_rate_t, freq = freq_t, file_sink = file_sink_t,
                                     ampl = ampl_t)
 
@@ -60,7 +60,7 @@ class Top_Block_Senior_Design(gr.top_block):
             self.disconnect_rx();
 
         #initial decision to transmit or receive
-        if enable_transmit:
+        if enable_initial_transmit:
             self.set_transmit(True)  
         else:
             self.set_transmit(False)
@@ -71,11 +71,11 @@ class Top_Block_Senior_Design(gr.top_block):
     def set_transmit(self, enabled):
         self.ampl = self.tx_path.get_ampl if self.tx_path.get_ampl >=  self.rx_path.get_ampl else self.rx_path.get_ampl
         if enabled:
-            self.rx_path.set_ampl(0,False)
-            self.tx_path.set_ampl(self.ampl,False)
+            self.rx_path.set_ampl(0)
+            self.tx_path.set_ampl(self.ampl)
         else:
-            self.tx_path.set_ampl(0,False)
-            self.rx_path.set_ampl(self.ampl,False)
+            self.tx_path.set_ampl(0)
+            self.rx_path.set_ampl(self.ampl)
             
 
     # Send New data from File
@@ -346,7 +346,7 @@ class transmit_path(gr.hier_block2):
 # ////////////////////////////////////////////////////////////////////////
 
 class receive_path(gr.hier_block2):
-    def __init__(rx_gain, samps_per_sym, samp_rate, freq, file_sink, ampl):
+    def __init__(self, samps_per_sym, samp_rate, freq, file_sink, ampl):
         gr.hier_block2.__init__(self, "receive_path",
                 gr.io_signature(0, 0, 0), # Input signature
                 gr.io_signature(0, 0, 0)) # Output signature
@@ -355,11 +355,11 @@ class receive_path(gr.hier_block2):
         # Variables
         ##################################################
         self.file_sink = file_sink
-        self.rx_gain = rx_gain
+        self.rx_gain = rx_gain = 5
         self.samps_per_sym = samps_per_sym
         self.samp_rate = samp_rate
         self.freq = freq
-        self.ampl = ampl
+        self.ampl = ampl 
 
         ##################################################
         # Blocks
@@ -461,7 +461,7 @@ class receive_path(gr.hier_block2):
 
     def set_ampl(self, ampl):
         self.ampl = ampl
-        self.blocks_multiply_const_vxx_0.set_k((self.ampl, ))
+        self.blocks_multiply_const_vxx_0.set_k((1, ))
 
     def get_freq(self):
         return self.freq
