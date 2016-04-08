@@ -24,14 +24,18 @@ stateType addRoundKey(stateType state, keyType key, int roundNumber);
 
 int main()
 {
-	string cardNumber = "0123456789012345";
+	string cardNumber = "HeyDudesWhat'sUp";
 	string keyInput = "0123456789012345";
 
 	stateType key = createState(keyInput);
 	keyType expandedKey = expandKey(key);
 
+	cout << endl;
 	int x2 = 0;
-	int y2 = 0;
+	for(x2 = 0; x2 <16; x2++)
+	{
+		cout << cardNumber[x2];
+	}
 	cout << endl;
 	/*
 	for (x2 = 0; x2 < 4; x2++)

@@ -30,9 +30,10 @@ stateType key = createState(keyInput);
 keyType expandedKey = expandKey(key);
 //printState(key);
 
-/*
+
 int x2 = 0;
 int y2 = 0;
+/*
 cout << endl;
 for (x2 = 0; x2 < 4; x2++)
 {
@@ -44,22 +45,22 @@ for (x2 = 0; x2 < 4; x2++)
 */
 stateType state;
 
-state.array[0][0] = 0x78;
-state.array[1][0] = 0x4f;
-state.array[2][0] = 0x6a;
-state.array[3][0] = 0xda;
-state.array[0][1] = 0x4c;
-state.array[1][1] = 0x1c;
-state.array[2][1] = 0xfe;
-state.array[3][1] = 0x50;
-state.array[0][2] = 0x5b;
-state.array[1][2] = 0xa7;
-state.array[2][2] = 0x14;
-state.array[3][2] = 0x61;
-state.array[0][3] = 0xde;
-state.array[1][3] = 0x33;
-state.array[2][3] = 0x4f;
-state.array[3][3] = 0xd7;
+state.array[0][0] = 0x51;
+state.array[1][0] = 0x20;
+state.array[2][0] = 0xac;
+state.array[3][0] = 0xbe;
+state.array[0][1] = 0xc8;
+state.array[1][1] = 0x3b;
+state.array[2][1] = 0x82;
+state.array[3][1] = 0xac;
+state.array[0][2] = 0x8e;
+state.array[1][2] = 0xf6;
+state.array[2][2] = 0xc1;
+state.array[3][2] = 0xff;
+state.array[0][3] = 0xe4;
+state.array[1][3] = 0x60;
+state.array[2][3] = 0x0f;
+state.array[3][3] = 0x2f;
 
 int roundNumber = 0;
 
@@ -68,9 +69,7 @@ printState(state);
 for(roundNumber = 8; roundNumber > 0; roundNumber--)
 	{
 		state = addRoundKey(state,expandedKey,roundNumber);
-		//printState(state);
 		state = invShiftRows(state);
-		//printState(state);
 		state = invSubBytes(state);
 		//printState(state);
 	} // end rounds
@@ -78,7 +77,17 @@ for(roundNumber = 8; roundNumber > 0; roundNumber--)
 state = addRoundKey(state,expandedKey,0);
 
 printState(state);
+cout << endl;
+for(x2 = 0; x2 < 4; x2++)
+{
+	for(y2 = 0; y2 < 4; y2++)
+	{
+		cout << (char)state.array[y2][x2];
+	}
+}
 
+cout << endl;
+cout << endl;
 
 } //end main
 
@@ -197,9 +206,9 @@ stateType invShiftRows(stateType state)
 		for (shifter = 0; shifter < row; shifter++)
 		{
 			temp = tempState.array[row][3];
-			for(col = 0; col < 3; col++)
+			for(col = 3; col > 0; col--)
 				{	
-				tempState.array[row][col+1] = tempState.array[row][col];
+				tempState.array[row][col] = tempState.array[row][col-1];
 				}
 			tempState.array[row][0] = temp;
 		}
