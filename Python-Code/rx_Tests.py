@@ -4,6 +4,13 @@ import time
 import sys
 from Transmit_Receive_Blocks import Top_Block_Senior_Design
 
+
+
+
+################################################################
+# ---------------------SIMPLE TESTS---------------------------- 
+################################################################
+
 def increment_rx():
     tb = Top_Block_Senior_Design(file_source_t = "file_source", 
                                 file_sink_t = "file_sink", 
@@ -51,7 +58,12 @@ def standard_rx():
 
 
 
-# END MAIN
+################################################################
+# ---------------------ADVAMCED TESTS---------------------------- 
+################################################################
+
+
+
 
 if __name__ == "__main__":
     # CHOOSE TEST HERE
