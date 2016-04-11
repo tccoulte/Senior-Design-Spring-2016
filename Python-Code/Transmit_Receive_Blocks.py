@@ -70,21 +70,24 @@ class Top_Block_Senior_Design(gr.top_block):
 
 	def set_transmit(self, enabled):
 		if enabled:
-			self.rx_path.set_ampl(0)
-			self.tx_path.set_ampl(self.get_ampl())
+			self.set_ampl_rx(0)
+			self.set_ampl_tx(self.get_ampl())
+			# self.rx_path.set_ampl(0)
+			# self.tx_path.set_ampl(self.get_ampl())
 		else:
-			self.tx_path.set_ampl(0)
-			self.rx_path.set_ampl(self.get_ampl())
-			
+			# self.tx_path.set_ampl(0)
+			# self.rx_path.set_ampl(self.get_ampl())
+			self.set_ampl_rx(1)
+			self.set_ampl_tx(0)
 
 	# Send New data from File
 	# TODO: see if this even works
-	def send_new_packet(self, message_string, repeat_number):
+	def send_new_packet(self, message_string, repeat_number, repeat_bool = False):
 		self.set_transmit(False)
 		self.lock_tx()
 		self.close_file_source()
 		self.write_new_data_to_file(message_string, repeat_number)
-		self.open_file_source()
+		self.open_file_source(repeat_bool)
 		self.set_transmit(True)
 		self.unlock_tx()
 
@@ -112,8 +115,8 @@ class Top_Block_Senior_Design(gr.top_block):
 	def close_file_source(self):
 		self.tx_path.close_file()
 
-	def open_file_source(self):
-		self.tx_path.open_file()
+	def open_file_source(self,repeat):
+		self.tx_path.open_file(repeat)
 
 	# Disconnect, Connect, Lock and Unlock Functions
 
@@ -143,8 +146,6 @@ class Top_Block_Senior_Design(gr.top_block):
 
 
 	# Getters and Setters
-	def set_repeat(self, repeat_bool):
-		self.tx_path.set_repeat(repeat_bool)
 
 	def get_tx_gain(self):
 		return self.tx_path.get_tx_gain()
@@ -188,12 +189,12 @@ class Top_Block_Senior_Design(gr.top_block):
 	def get_ampl(self):
 		return self.ampl
 
-	def set_ampl_rx(self, ampl,globl):
+	def set_ampl_rx(self, ampl,globl = False):
 		self.rx_path.set_ampl(ampl)
 		if globl is True:
 			self.set_ampl(ampl) 
 
-	def set_ampl_tx(self, ampl,globl):
+	def set_ampl_tx(self, ampl,globl = False):
 		self.tx_path.set_ampl(ampl)
 		if globl is True:
 			self.set_ampl(ampl) 
@@ -280,7 +281,7 @@ class transmit_path(gr.hier_block2):
 	def close_file(self):
 		self.blocks_file_source_0.close()
 
-	def open_file(self, repeat = False):
+	def open_file(self, repeat):
 		self.blocks_file_source_0.open(self.file_source,repeat)
 
 	def write_to_file(self, message_string, repeat_nunber):
@@ -288,12 +289,9 @@ class transmit_path(gr.hier_block2):
 		for i in range(0,repeat_number-2):
 			message_string = message_string + "/n" + message_string
 		file_obj.write(message_string)
+		file_obj.close()
 	
 	# Getters and Setters
-
-	def set_repeat(self, repeat_bool):
-		self.close_file()
-		self.open_file(repeat_bool)
 
 	def get_tx_gain(self):
 		return self.tx_gain
