@@ -17,8 +17,11 @@ import time
 #                           Top Block
 # ////////////////////////////////////////////////////////////////////////
 
-class Top_Block_Senior_Design(gr.top_block):
 
+
+
+class Top_Block_Senior_Design(gr.top_block):
+"""Contains interface methods to transmitter and receiver blocks"""
 	def __init__(self,file_source_t, file_sink_t, disconnect_transmit=False, disconnect_receive=False, enable_initial_transmit=False):
 		gr.top_block.__init__(self, "Top Block Senior Design")
 
@@ -83,6 +86,9 @@ class Top_Block_Senior_Design(gr.top_block):
 	# Send New data from File
 	# TODO: see if this even works
 	def send_new_packet(self, message_string, repeat_number, repeat_bool = False):
+		"""Locks graph, closes file and then writes new message to be sent. The file is then opened
+		and the flow graph is unlocked
+		"""
 		self.set_transmit(False)
 		self.lock_tx()
 		self.close_file_source()
@@ -92,6 +98,7 @@ class Top_Block_Senior_Design(gr.top_block):
 		self.unlock_tx()
 
 	def write_new_data_to_file(message_string , repeat_number):
+		"""Helper for new_packet that writes to the file source"""
 		self.tx_path.write_to_file(message_string, repeat_number)
 
 	# Get SNR
@@ -103,6 +110,7 @@ class Top_Block_Senior_Design(gr.top_block):
 		self.lock_rx()
 		self.rx_path.clear_file()
 		self.unlock_rx()
+	
 	#  Close/Open Receive File
 	def close_file_sink(self):
 		self.rx_path.close_file()
@@ -111,7 +119,6 @@ class Top_Block_Senior_Design(gr.top_block):
 		self.rx_path.open_file()
 		
 	# Close/Open Transmit File
-
 	def close_file_source(self):
 		self.tx_path.close_file()
 
@@ -119,7 +126,6 @@ class Top_Block_Senior_Design(gr.top_block):
 		self.tx_path.open_file(repeat)
 
 	# Disconnect, Connect, Lock and Unlock Functions
-
 	def lock_tx(self):
 		self.tx_path.lock()
 
@@ -146,7 +152,6 @@ class Top_Block_Senior_Design(gr.top_block):
 
 
 	# Getters and Setters
-
 	def get_tx_gain(self):
 		return self.tx_path.get_tx_gain()
 
@@ -188,7 +193,8 @@ class Top_Block_Senior_Design(gr.top_block):
 
 	def get_ampl(self):
 		return self.ampl
-
+	
+	#globl variable used to set Top_block amplitude at the same time
 	def set_ampl_rx(self, ampl,globl = False):
 		self.rx_path.set_ampl(ampl)
 		if globl is True:
