@@ -21,7 +21,6 @@ import time
 
 
 class Top_Block_Senior_Design(gr.top_block):
-"""Contains interface methods to transmitter and receiver blocks"""
 	def __init__(self,file_source_t, file_sink_t, disconnect_transmit=False, disconnect_receive=False, enable_initial_transmit=False):
 		gr.top_block.__init__(self, "Top Block Senior Design")
 

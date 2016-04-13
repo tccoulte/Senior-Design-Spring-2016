@@ -66,4 +66,5 @@ def standard_rx():
 
 
 if __name__ == "__main__":
+    standard_rx()
     # CHOOSE TEST HERE
