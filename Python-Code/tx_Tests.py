@@ -16,7 +16,7 @@ from Transmit_Receive_Blocks import Top_Block_Senior_Design
 def increment_tx():
     tb = Top_Block_Senior_Design(file_source_t = "file_source", 
                                 file_sink_t = "file_sink", 
-                                disconnect_recieve = True
+                                disconnect_recieve = True,
                                 enable_initial_transmit = True)
     initial_message = "This should be Received Clearly"
     tb.set_ampl_tx(.1,True)
@@ -38,7 +38,7 @@ def increment_ampl(ampl, amount):
 def continous_packet_send():
     tb = Top_Block_Senior_Design(file_source_t = "file_source", 
                                 file_sink_t = "file_sink", 
-                                disconnect_recieve = True
+                                disconnect_recieve = True,
                                 enable_initial_transmit = True)
     message = "This is the packet"
     
@@ -49,7 +49,7 @@ def continous_packet_send():
     tb.set_ampl_tx(amplitude,True)
     tb.send_new_packet(message, 10)
     tb.run()
-    while True
+    while True:
         tb.send_new_packet(message, 10)
         time.sleep(.01)
 
@@ -59,7 +59,7 @@ def continous_packet_send():
 def packet_send_test():
     tb = Top_Block_Senior_Design(file_source_t = "file_source", 
                                 file_sink_t = "file_sink", 
-                                disconnect_recieve = True
+                                disconnect_recieve = True,
                                 enable_initial_transmit = True)
     old_message = "Hello I am Tim"
     new_message = "This is a different message"
@@ -101,7 +101,7 @@ def standard_tx():
 def lock_test():
     tb = Top_Block_Senior_Design(file_source_t = "file_source", 
                                 file_sink_t = "file_sink", 
-                                disconnect_recieve = True
+                                disconnect_recieve = True,
                                 enable_initial_transmit = True)
     #lock and unlock flowgraph before running to see if there is a problem...
     tb.lock_tx()
@@ -114,7 +114,7 @@ def lock_test():
 def write_to_file_test():
     tb = Top_Block_Senior_Design(file_source_t = "file_source", 
                                 file_sink_t = "file_sink", 
-                                disconnect_recieve = True
+                                disconnect_recieve = True,
                                 enable_initial_transmit = True)
     tb.write_new_data_to_file("Testing Writting...",5)
     sys.exit("Go Look at File")
