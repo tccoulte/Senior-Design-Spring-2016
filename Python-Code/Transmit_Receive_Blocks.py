@@ -96,7 +96,7 @@ class Top_Block_Senior_Design(gr.top_block):
 		self.set_transmit(True)
 		self.unlock_tx()
 
-	def write_new_data_to_file(message_string , repeat_number):
+	def write_new_data_to_file(self, message_string , repeat_number):
 		"""Helper for new_packet that writes to the file source"""
 		self.tx_path.write_to_file(message_string, repeat_number)
 
@@ -289,10 +289,10 @@ class transmit_path(gr.hier_block2):
 	def open_file(self, repeat):
 		self.blocks_file_source_0.open(self.file_source,repeat)
 
-	def write_to_file(self, message_string, repeat_nunber):
+	def write_to_file(self, message_string, repeat_number):
 		file_obj = open(self.file_source, 'w')
 		for i in range(0,repeat_number-2):
-			message_string = message_string + "/n" + message_string
+			message_string = message_string + '\n' + message_string
 		file_obj.write(message_string)
 		file_obj.close()
 	
