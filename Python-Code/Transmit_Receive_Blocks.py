@@ -31,7 +31,7 @@ class Top_Block_Senior_Design(gr.top_block):
 		samps_per_sym_t = 4
 		samp_rate_t = 1E6
 		rx_gain_t = 5
-		pay_len_t = 10
+		pay_len_t = 15
 		freq_t = 13.56E6
 		ampl_t = 1
 
@@ -88,13 +88,15 @@ class Top_Block_Senior_Design(gr.top_block):
 		"""Locks graph, closes file and then writes new message to be sent. The file is then opened
 		and the flow graph is unlocked
 		"""
-		self.set_transmit(False)
+
 		self.lock_tx()
+		self.set_transmit(False)
 		self.close_file_source()
 		self.write_new_data_to_file(message_string, repeat_number)
 		self.open_file_source(repeat_bool)
 		self.set_transmit(True)
 		self.unlock_tx()
+	
 
 	def write_new_data_to_file(self, message_string , repeat_number):
 		"""Helper for new_packet that writes to the file source"""
@@ -197,12 +199,12 @@ class Top_Block_Senior_Design(gr.top_block):
 	def set_ampl_rx(self, ampl,globl = False):
 		self.rx_path.set_ampl(ampl)
 		if globl is True:
-			self.set_ampl(ampl) 
+			self.ampl = ampl 
 
 	def set_ampl_tx(self, ampl,globl = False):
 		self.tx_path.set_ampl(ampl)
 		if globl is True:
-			self.set_ampl(ampl) 
+			self.ampl = ampl
 
 # END TOP_BLOCK_SENIOR_DESIGN
 
@@ -291,9 +293,10 @@ class transmit_path(gr.hier_block2):
 
 	def write_to_file(self, message_string, repeat_number):
 		file_obj = open(self.file_source, 'w')
+		message = message_string
 		for i in range(0,repeat_number-2):
-			message_string = message_string + '\n' + message_string
-		file_obj.write(message_string)
+			message = message + '\n' + message_string
+		file_obj.write(message)
 		file_obj.close()
 	
 	# Getters and Setters
@@ -463,7 +466,6 @@ class receive_path(gr.hier_block2):
 	def set_ampl(self, ampl):
 		self.ampl = ampl 
 		self.blocks_multiply_const_vxx_0.set_k((self.ampl, ))
-		print type(ampl)
 
 	def get_freq(self):
 		return self.freq

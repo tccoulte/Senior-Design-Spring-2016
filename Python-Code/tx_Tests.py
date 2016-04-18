@@ -48,7 +48,7 @@ def continous_packet_send():
     
     tb.set_ampl_tx(amplitude,True)
     tb.send_new_packet(message, 10)
-    tb.run()
+    tb.start()
     while True:
         tb.send_new_packet(message, 10)
         time.sleep(.01)
@@ -64,11 +64,11 @@ def packet_send_test():
     old_message = "Hello I am Tim"
     new_message = "This is a different message"
     tb.set_ampl_tx(1,True)
-    tb.send_new_packet(old_message,10)
-    tb.run()
-    time.sleep(.1)
-    tb.send_new_packet(new_message,10)
-    time.sleep(.1)
+    tb.start()
+    time.sleep(.2)
+    tb.send_new_packet(old_message, 5)
+    time.sleep(1)
+    tb.stop()
     sys.exit("Both Packets Sent...")
 
 
@@ -82,14 +82,17 @@ def standard_tx():
 
     #### change ampl ##########
 
-    tb.set_ampl = 1 
+    tb.set_ampl_tx(1)
     
     ###########################
 
-    initial_mesage = "This is a transmit test"
-    repetition = 10
+    initial_message = "This is a transmit test" + "\n"
+    repetition = 1
     tb.send_new_packet(initial_message, repetition, True)
-    tb.run()
+    tb.start()
+    time.sleep(2)
+    sys.exit('End of program...')
+
 
 
 
@@ -129,5 +132,4 @@ def write_to_file_test():
 
 
 if __name__ == "__main__":
-    write_to_file_test()
-    
+    packet_send_test()
