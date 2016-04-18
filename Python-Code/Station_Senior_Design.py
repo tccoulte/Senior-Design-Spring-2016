@@ -3,6 +3,7 @@ import time
 import os
 from Transmit_Receive_Blocks import Top_Block_Senior_Design
 from Timeout import Timeout
+from global_types import class_state,phone_state,station_state
 
 
 
@@ -12,8 +13,7 @@ class Station_Senior_Design:
                                 file_sink_t = file_sink)
         self.read_file = file_sink
         self.SNR_threshold = <<FIND ME>>
-        self.state_enum = enum('TIMEOUT','RECEIVED','TRANSMITTED','KILLED','IDLE','NOT_RECEIVED')
-        self.state_message = state_enum.IDLE
+        self.state_message = class_state.IDLE
         self.amplitude = 0
 
 
@@ -24,7 +24,7 @@ class Station_Senior_Design:
     def send_message(self, message,repetition):
         """Sends new message with specified repetition"""
         self.GNU_Radio_Block.send_new_packet(message,repetition)
-        self.set_state(self.state_enum.TRANSMITTED)
+        self.set_state(class_state.TRANSMITTED)
 
     def receive_message(self,time_out, message,repetition,number_correct):
         """Try to listen for a message with SNR of at least SNR_threshold. Send TIMEOUT state message 
@@ -37,11 +37,11 @@ class Station_Senior_Design:
                 self.GNU_Radio_Block.clear_file_sink()
                 self.poll_SNR(self.SNR_threshold)
                 if self.verify_transmission(message,repetition,number_correct):
-                    self.set_state(self.state_enum.RECEIVED)
+                    self.set_state(class_state.RECEIVED)
                 else:
-                    self.set_state(self.state_enum.NOT_RECEIVED)
+                    self.set_state(class_state.NOT_RECEIVED)
         except TimeoutError:
-            self.set_state(self.state_enum.TIMEOUT)
+            self.set_state(class_state.TIMEOUT)
             
 
     def receive_unkown_message(self, message_length, repetition, number_correct):
@@ -97,7 +97,7 @@ if __name__ == "__main__":
     #INITIAL SETUP
     amplitude = .1
     max_amplitude = .8
-    states = enum('INCREMENT_AND_WAIT','CHECK_AND_WAIT','REQUEST_AND_WAIT','ERROR_CHECK','ENCRYPT_AND_WAIT')
+    states = station_state.IDLE
     write_file = <<PUT WRITE FILE HERE>>
     read_file = <<PUT READ FILE HERE>>
     station = Station_Senior_Design(file_source = read_file, file_sink = write_file)
