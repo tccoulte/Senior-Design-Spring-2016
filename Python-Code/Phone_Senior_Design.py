@@ -27,7 +27,7 @@ class Phone_Senior_Design:
         self.credit_card_nunber = credit_card_nunber
         self.read_file = file_sink
         self.SNR_threshold = <<FIND ME>>
-        self.state_message = class_state
+        self.state_message = class_state.IDLE
         self.amplitude = 0
 
 
@@ -113,7 +113,7 @@ if __name__ == "__main__":
     #INITIAL SETUP
     amplitude = .1
     max_amplitude = .8
-    states = phone_state
+    states = phone_state.IDLE
     card_number = <<PUT CARD NUMBER HERE>>
     write_file = <<PUT WRITE FILE HERE>>
     read_file = <<PUT READ FILE HERE>>
