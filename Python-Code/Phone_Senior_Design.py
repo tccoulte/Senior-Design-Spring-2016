@@ -3,6 +3,7 @@ import time
 import os
 from Transmit_Receive_Blocks import Top_Block_Senior_Design
 from Timeout import Timeout
+from global_types import class_state,phone_state,station_state
 
 """
 functions needed:
@@ -26,8 +27,7 @@ class Phone_Senior_Design:
         self.credit_card_nunber = credit_card_nunber
         self.read_file = file_sink
         self.SNR_threshold = <<FIND ME>>
-        self.state_enum = enum('TIMEOUT','RECEIVED','TRANSMITTED','KILLED','IDLE','NOT_RECEIVED')
-        self.state_message = state_enum.IDLE
+        self.state_message = class_state
         self.amplitude = 0
 
 
@@ -38,7 +38,7 @@ class Phone_Senior_Design:
     def send_message(self, message,repetition):
         """Sends new message with specified repetition"""
         self.GNU_Radio_Block.send_new_packet(message,repetition)
-        self.set_state(self.state_enum.TRANSMITTED)
+        self.set_state(class_state.TRANSMITTED)
 
     def receive_message(self,time_out, message,repetition,number_correct):
         """Try to listen for a message with SNR of at least SNR_threshold. Send TIMEOUT state message 
@@ -51,11 +51,11 @@ class Phone_Senior_Design:
                 self.GNU_Radio_Block.clear_file_sink()
                 self.poll_SNR(self.SNR_threshold)
                 if self.verify_transmission(message,repetition,number_correct):
-                    self.set_state(self.state_enum.RECEIVED)
+                    self.set_state(class_state.RECEIVED)
                 else:
-                    self.set_state(self.state_enum.NOT_RECEIVED)
+                    self.set_state(class_state.NOT_RECEIVED)
         except TimeoutError:
-            self.set_state(self.state_enum.TIMEOUT)
+            self.set_state(class_state.TIMEOUT)
             
 
     def receive_unkown_message(self, message_length, repetition, number_correct):
@@ -67,10 +67,6 @@ class Phone_Senior_Design:
 
     def get_credit_card_number(self):
         return self.credit_card_nunber
-
-    def encrypt_card_number(self,credit_card_number):
-        pass
-        #Vinny Stuff
 
     def poll_SNR(self,threshold, poll_time):
         """polls SNR every certain number of seconds. NEEDS TO BE PAIRED
@@ -117,7 +113,7 @@ if __name__ == "__main__":
     #INITIAL SETUP
     amplitude = .1
     max_amplitude = .8
-    states = enum('INCREMENT_AND_WAIT','CHECK_AND_WAIT','REQUEST_AND_WAIT','ERROR_CHECK','ENCRYPT_AND_WAIT')
+    states = phone_state
     card_number = <<PUT CARD NUMBER HERE>>
     write_file = <<PUT WRITE FILE HERE>>
     read_file = <<PUT READ FILE HERE>>
