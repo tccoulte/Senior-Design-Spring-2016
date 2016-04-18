@@ -2,7 +2,6 @@
 import time
 import os
 from Transmit_Receive_Blocks import Top_Block_Senior_Design
-from extra_functions import enum
 from Timeout import Timeout
 
 
