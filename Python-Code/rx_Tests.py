@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import math
 import time
 import sys
 from Transmit_Receive_Blocks import Top_Block_Senior_Design
@@ -17,11 +17,14 @@ def increment_rx():
                                 disconnect_transmit = True)
     tb.start()
     snr_list = list()
-    threshold = 4
+    threshold = 10
     found_SNR_above_thresh = False
-    while True:
+    snrMaxlist = []
+    timeStart = time.time()
+    while time.time() - timeStart < 10:
         snr = tb.SNR()
-        snr_list.append(snr)
+        if not math.isnan(float(snr)):
+            snr_list.append(snr)
         if snr > threshold and found_SNR_above_thresh is False:
             print 'Greater than threshold'
             snr_list = snr_list[-1]
@@ -29,14 +32,17 @@ def increment_rx():
         if len(snr_list) is 100:
             if found_SNR_above_thresh is True:
                 found_SNR_above_thresh = False
-                time.sleep(.05)
+                time.sleep(.5)
                 tb.close_file_sink()
                 print 'SNR average for above threshold + 100 values'
                 print sum(snr_list)/len(snr_list)
                 sys.exit("Received Message -- code will now exit")
             print sum(snr_list)/len(snr_list)
+            snrMaxlist.append(max(snr_list))
             snr_list = []
-    tb.Wait()
+
+    print max(snrMaxlist)
+    sys.exit()
 
 
 
