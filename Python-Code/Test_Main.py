@@ -3,6 +3,7 @@ import sys
 from Transmit_Receive_Blocks import Top_Block_Senior_Design
 from Senior_Design import Senior_Design
 from global_types import class_state,phone_state,station_state
+import logging
 
 
 #////////////////////////////////////////////////////
@@ -124,13 +125,15 @@ def SNR_s():
        
 ########## USEFUL FUNCTIONS #############
 
-def parse_amplitude_message(message)
-    
+def parse_amplitude_message(message):
+    pass
 
 ############# MAIN ######################
 
-if __name__ == 'main':
+if __name__ == '__main__':
     logging.basicConfig(filename='Logging/test.log', 
         level=logging.DEBUG,format='%(asctime)s - %(levelname)s - %(message)s')
+    # add filemode = 'w' if you want to overwrite log file
     #Call Test
+    print "hello"
     logging.info("Application Finished")
