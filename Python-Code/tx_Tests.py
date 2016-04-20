@@ -132,4 +132,4 @@ def write_to_file_test():
 
 
 if __name__ == "__main__":
-    packet_send_test()
+    standard_tx()

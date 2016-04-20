@@ -28,7 +28,7 @@ class Top_Block_Senior_Design(gr.top_block):
 		# Variables
 		##################################################
 		tx_gain_t = 5
-		samps_per_sym_t = 4
+		samps_per_sym_t = 2
 		samp_rate_t = 1E6
 		rx_gain_t = 5
 		pay_len_t = 15
@@ -105,6 +105,12 @@ class Top_Block_Senior_Design(gr.top_block):
 	# Get SNR
 	def SNR(self):
 		return self.rx_path.get_SNR()
+
+
+
+	def update_file(self):
+		self.rx_path.update_file()
+
 
 	# Clear file
 	def clear_file_sink(self):
@@ -402,7 +408,7 @@ class receive_path(gr.hier_block2):
 		self.blocks_multiply_const_vxx_0 = blocks.multiply_const_vcc((ampl, ))
 
 		self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_char*1, file_sink, True)
-		self.blocks_file_sink_0.set_unbuffered(False)
+		self.blocks_file_sink_0.set_unbuffered(True)
 
 		self.blks2_packet_decoder_0 = grc_blks2.packet_demod_b(grc_blks2.packet_decoder(
 				access_code="",
@@ -428,14 +434,18 @@ class receive_path(gr.hier_block2):
 		return self.digital_mpsk_snr_est_cc_0.snr()
 	# File IO
 
+	def update_file(self):
+		self.blocks_file_sink_0.do_update()
+
+
 	def clear_file(self):
-		open(self.file_sink, 'w').close()
+		(open(self.file_sink, 'w')).close()
 
 	def close_file(self):
-		self.blocks_file_source_0.close()
+		self.blocks_file_sink_0.close()
 
 	def open_file(self):
-		self.blocks_file_source_0.open(self.file_sink)
+		self.blocks_file_sink_0.open(self.file_sink)
 
 
 	# Getters and Setters 

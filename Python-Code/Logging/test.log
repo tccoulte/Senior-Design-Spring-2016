@@ -1,0 +1,399 @@
+2016-04-20 17:31:01,903 - INFO - ---------------------------
+2016-04-20 17:31:01,903 - INFO - New Application Started
+2016-04-20 17:31:01,903 - INFO - ---------------------------
+2016-04-20 17:31:05,319 - INFO - SNR Threshold met
+2016-04-20 17:31:05,319 - INFO - SNR Treshold: 1
+2016-04-20 17:31:06,320 - INFO - Message Received
+2016-04-20 17:31:06,321 - INFO - Message_Tuple: ('This is the first message', 17)
+2016-04-20 17:31:07,125 - INFO - Message Sent
+2016-04-20 17:31:07,125 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:31:09,129 - INFO - Application Finished
+2016-04-20 17:31:47,079 - INFO - ---------------------------
+2016-04-20 17:31:47,079 - INFO - New Application Started
+2016-04-20 17:31:47,080 - INFO - ---------------------------
+2016-04-20 17:31:50,686 - INFO - SNR Threshold met
+2016-04-20 17:31:50,686 - INFO - SNR Treshold: 1
+2016-04-20 17:31:51,690 - INFO - Message Received
+2016-04-20 17:31:51,690 - INFO - Message_Tuple: ('This is the first message', 12)
+2016-04-20 17:31:52,193 - INFO - Message Sent
+2016-04-20 17:31:52,193 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:31:54,199 - INFO - Application Finished
+2016-04-20 17:32:35,457 - INFO - ---------------------------
+2016-04-20 17:32:35,457 - INFO - New Application Started
+2016-04-20 17:32:35,457 - INFO - ---------------------------
+2016-04-20 17:33:57,244 - INFO - ---------------------------
+2016-04-20 17:33:57,244 - INFO - New Application Started
+2016-04-20 17:33:57,244 - INFO - ---------------------------
+2016-04-20 17:34:25,997 - INFO - ---------------------------
+2016-04-20 17:34:25,997 - INFO - New Application Started
+2016-04-20 17:34:25,997 - INFO - ---------------------------
+2016-04-20 17:34:29,939 - INFO - SNR Threshold met
+2016-04-20 17:34:29,939 - INFO - SNR Treshold: 1
+2016-04-20 17:34:30,943 - INFO - Message Received
+2016-04-20 17:34:30,943 - INFO - Message_Tuple: ('This is the first message', 8)
+2016-04-20 17:34:31,449 - INFO - Message Sent
+2016-04-20 17:34:31,449 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:34:31,653 - INFO - Application Finished
+2016-04-20 17:39:16,212 - INFO - ---------------------------
+2016-04-20 17:39:16,212 - INFO - New Application Started
+2016-04-20 17:39:16,212 - INFO - ---------------------------
+2016-04-20 17:40:10,410 - INFO - SNR Threshold met
+2016-04-20 17:40:10,410 - INFO - SNR Treshold: 1
+2016-04-20 17:40:11,413 - INFO - Message Received
+2016-04-20 17:40:11,413 - INFO - Message_Tuple: ('This is the first message', 12)
+2016-04-20 17:40:11,919 - INFO - Message Sent
+2016-04-20 17:40:11,920 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:40:12,121 - INFO - Application Finished
+2016-04-20 17:41:15,598 - INFO - ---------------------------
+2016-04-20 17:41:15,598 - INFO - New Application Started
+2016-04-20 17:41:15,598 - INFO - ---------------------------
+2016-04-20 17:41:20,995 - INFO - SNR Threshold met
+2016-04-20 17:41:20,995 - INFO - SNR Treshold: 1
+2016-04-20 17:41:21,996 - INFO - Message Received
+2016-04-20 17:41:21,996 - INFO - Message_Tuple: ('This is the first message', 12)
+2016-04-20 17:41:22,498 - INFO - Message Sent
+2016-04-20 17:41:22,499 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:41:22,703 - INFO - Application Finished
+2016-04-20 17:43:27,599 - INFO - ---------------------------
+2016-04-20 17:43:27,600 - INFO - New Application Started
+2016-04-20 17:43:27,600 - INFO - ---------------------------
+2016-04-20 17:43:33,469 - INFO - SNR Threshold met
+2016-04-20 17:43:33,469 - INFO - SNR Treshold: 1
+2016-04-20 17:43:33,770 - INFO - Message Received
+2016-04-20 17:43:33,770 - INFO - Message_Tuple: ('This is the first message', 11)
+2016-04-20 17:43:34,272 - INFO - Message Sent
+2016-04-20 17:43:34,273 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:43:34,476 - INFO - Application Finished
+2016-04-20 17:44:22,623 - INFO - ---------------------------
+2016-04-20 17:44:22,624 - INFO - New Application Started
+2016-04-20 17:44:22,624 - INFO - ---------------------------
+2016-04-20 17:44:27,366 - INFO - SNR Threshold met
+2016-04-20 17:44:27,366 - INFO - SNR Treshold: 1
+2016-04-20 17:44:27,567 - INFO - Message Received
+2016-04-20 17:44:27,567 - INFO - Message_Tuple: ('This is the first message', 7)
+2016-04-20 17:44:28,071 - INFO - Message Sent
+2016-04-20 17:44:28,071 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:44:28,276 - INFO - Application Finished
+2016-04-20 17:46:10,792 - INFO - ---------------------------
+2016-04-20 17:46:10,793 - INFO - New Application Started
+2016-04-20 17:46:10,794 - INFO - ---------------------------
+2016-04-20 17:46:20,176 - INFO - SNR Threshold met
+2016-04-20 17:46:20,176 - INFO - SNR Treshold: 1
+2016-04-20 17:46:20,481 - INFO - Message Received
+2016-04-20 17:46:20,482 - INFO - Message_Tuple: ('This is the first message', 12)
+2016-04-20 17:46:20,987 - INFO - Message Sent
+2016-04-20 17:46:20,987 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:46:21,192 - INFO - Application Finished
+2016-04-20 17:48:16,849 - INFO - ---------------------------
+2016-04-20 17:48:16,849 - INFO - New Application Started
+2016-04-20 17:48:16,850 - INFO - ---------------------------
+2016-04-20 17:48:20,884 - INFO - SNR Threshold met
+2016-04-20 17:48:20,884 - INFO - SNR Treshold: 1
+2016-04-20 17:48:21,185 - INFO - Message Received
+2016-04-20 17:48:21,185 - INFO - Message_Tuple: ('This is the first message', 7)
+2016-04-20 17:48:21,793 - INFO - Message Sent
+2016-04-20 17:48:21,793 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:48:21,995 - INFO - Application Finished
+2016-04-20 17:49:05,040 - INFO - ---------------------------
+2016-04-20 17:49:05,041 - INFO - New Application Started
+2016-04-20 17:49:05,041 - INFO - ---------------------------
+2016-04-20 17:49:10,732 - INFO - SNR Threshold met
+2016-04-20 17:49:10,732 - INFO - SNR Treshold: 1
+2016-04-20 17:49:11,032 - INFO - Message Received
+2016-04-20 17:49:11,032 - INFO - Message_Tuple: ('This is the first message', 12)
+2016-04-20 17:49:11,635 - INFO - Message Sent
+2016-04-20 17:49:11,635 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:49:11,836 - INFO - Application Finished
+2016-04-20 17:49:27,575 - INFO - ---------------------------
+2016-04-20 17:49:27,576 - INFO - New Application Started
+2016-04-20 17:49:27,576 - INFO - ---------------------------
+2016-04-20 17:49:30,469 - INFO - SNR Threshold met
+2016-04-20 17:49:30,470 - INFO - SNR Treshold: 1
+2016-04-20 17:49:30,770 - INFO - Message Received
+2016-04-20 17:49:30,770 - INFO - Message_Tuple: ('This is the first message', 12)
+2016-04-20 17:49:31,375 - INFO - Message Sent
+2016-04-20 17:49:31,375 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:49:31,581 - INFO - Application Finished
+2016-04-20 17:50:05,131 - INFO - ---------------------------
+2016-04-20 17:50:05,131 - INFO - New Application Started
+2016-04-20 17:50:05,131 - INFO - ---------------------------
+2016-04-20 17:50:08,642 - INFO - SNR Threshold met
+2016-04-20 17:50:08,642 - INFO - SNR Treshold: 1
+2016-04-20 17:50:08,944 - INFO - Message Received
+2016-04-20 17:50:08,944 - INFO - Message_Tuple: ('This is the first message', 15)
+2016-04-20 17:50:09,546 - INFO - Message Sent
+2016-04-20 17:50:09,546 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:50:09,750 - INFO - Application Finished
+2016-04-20 17:52:47,119 - INFO - ---------------------------
+2016-04-20 17:52:47,119 - INFO - New Application Started
+2016-04-20 17:52:47,119 - INFO - ---------------------------
+2016-04-20 17:52:50,178 - INFO - SNR Threshold met
+2016-04-20 17:52:50,178 - INFO - SNR Treshold: 1
+2016-04-20 17:52:50,479 - INFO - Message Received
+2016-04-20 17:52:50,479 - INFO - Message_Tuple: ('This is the first message', 9)
+2016-04-20 17:52:51,082 - INFO - Message Sent
+2016-04-20 17:52:51,083 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:52:52,267 - INFO - SNR Threshold met
+2016-04-20 17:52:52,267 - INFO - SNR Treshold: 1
+2016-04-20 17:52:52,571 - INFO - Message Received
+2016-04-20 17:52:52,571 - INFO - Message_Tuple: ('This is the third message', 18)
+2016-04-20 17:53:54,423 - INFO - ---------------------------
+2016-04-20 17:53:54,423 - INFO - New Application Started
+2016-04-20 17:53:54,423 - INFO - ---------------------------
+2016-04-20 17:53:57,022 - INFO - SNR Threshold met
+2016-04-20 17:53:57,022 - INFO - SNR Treshold: 1
+2016-04-20 17:53:57,326 - INFO - Message Received
+2016-04-20 17:53:57,326 - INFO - Message_Tuple: ('This is the first message', 8)
+2016-04-20 17:53:57,932 - INFO - Message Sent
+2016-04-20 17:53:57,933 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:53:59,409 - INFO - SNR Threshold met
+2016-04-20 17:53:59,409 - INFO - SNR Treshold: 1
+2016-04-20 17:53:59,709 - INFO - Message Received
+2016-04-20 17:53:59,710 - INFO - Message_Tuple: ('This is the third message', 19)
+2016-04-20 17:55:10,347 - INFO - ---------------------------
+2016-04-20 17:55:10,348 - INFO - New Application Started
+2016-04-20 17:55:10,348 - INFO - ---------------------------
+2016-04-20 17:55:13,047 - INFO - SNR Threshold met
+2016-04-20 17:55:13,047 - INFO - SNR Treshold: 1
+2016-04-20 17:55:13,348 - INFO - Message Received
+2016-04-20 17:55:13,348 - INFO - Message_Tuple: ('This is the first message', 6)
+2016-04-20 17:55:13,953 - INFO - Message Sent
+2016-04-20 17:55:13,953 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:55:15,076 - INFO - SNR Threshold met
+2016-04-20 17:55:15,076 - INFO - SNR Treshold: 1
+2016-04-20 17:55:15,379 - INFO - Message Received
+2016-04-20 17:55:15,380 - INFO - Message_Tuple: ('This is the third message', 17)
+2016-04-20 17:55:45,201 - INFO - ---------------------------
+2016-04-20 17:55:45,202 - INFO - New Application Started
+2016-04-20 17:55:45,202 - INFO - ---------------------------
+2016-04-20 17:55:48,331 - INFO - SNR Threshold met
+2016-04-20 17:55:48,331 - INFO - SNR Treshold: 1
+2016-04-20 17:55:48,634 - INFO - Message Received
+2016-04-20 17:55:48,634 - INFO - Message_Tuple: ('This is the first message', 17)
+2016-04-20 17:55:49,237 - INFO - Message Sent
+2016-04-20 17:55:49,237 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:55:50,380 - INFO - SNR Threshold met
+2016-04-20 17:55:50,381 - INFO - SNR Treshold: 1
+2016-04-20 17:55:50,685 - INFO - Message Received
+2016-04-20 17:55:50,685 - INFO - Message_Tuple: ('This is the third message', 17)
+2016-04-20 17:56:27,347 - INFO - ---------------------------
+2016-04-20 17:56:27,347 - INFO - New Application Started
+2016-04-20 17:56:27,347 - INFO - ---------------------------
+2016-04-20 17:56:33,099 - INFO - SNR Threshold met
+2016-04-20 17:56:33,099 - INFO - SNR Treshold: 1
+2016-04-20 17:56:33,400 - INFO - Message Received
+2016-04-20 17:56:33,400 - INFO - Message_Tuple: ('This is the first message', 17)
+2016-04-20 17:56:34,106 - INFO - Message Sent
+2016-04-20 17:56:34,106 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:56:35,352 - INFO - SNR Threshold met
+2016-04-20 17:56:35,352 - INFO - SNR Treshold: 1
+2016-04-20 17:56:35,653 - INFO - Message Received
+2016-04-20 17:56:35,653 - INFO - Message_Tuple: ('This is the third message', 17)
+2016-04-20 17:57:19,671 - INFO - ---------------------------
+2016-04-20 17:57:19,671 - INFO - New Application Started
+2016-04-20 17:57:19,672 - INFO - ---------------------------
+2016-04-20 17:57:26,137 - INFO - SNR Threshold met
+2016-04-20 17:57:26,138 - INFO - SNR Treshold: 1
+2016-04-20 17:57:26,443 - INFO - Message Received
+2016-04-20 17:57:26,443 - INFO - Message_Tuple: ('This is the first message', 12)
+2016-04-20 17:57:26,945 - INFO - Message Sent
+2016-04-20 17:57:26,946 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:57:28,139 - INFO - SNR Threshold met
+2016-04-20 17:57:28,140 - INFO - SNR Treshold: 1
+2016-04-20 17:57:28,440 - INFO - Message Received
+2016-04-20 17:57:28,440 - INFO - Message_Tuple: ('This is the third message', 16)
+2016-04-20 17:57:52,610 - INFO - ---------------------------
+2016-04-20 17:57:52,610 - INFO - New Application Started
+2016-04-20 17:57:52,610 - INFO - ---------------------------
+2016-04-20 17:58:40,443 - INFO - ---------------------------
+2016-04-20 17:58:40,443 - INFO - New Application Started
+2016-04-20 17:58:40,444 - INFO - ---------------------------
+2016-04-20 17:58:43,518 - INFO - SNR Threshold met
+2016-04-20 17:58:43,518 - INFO - SNR Treshold: 1
+2016-04-20 17:58:43,822 - INFO - Message Received
+2016-04-20 17:58:43,822 - INFO - Message_Tuple: ('This is the first message', 4)
+2016-04-20 17:58:44,326 - INFO - Message Sent
+2016-04-20 17:58:44,327 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 17:58:45,491 - INFO - SNR Threshold met
+2016-04-20 17:58:45,492 - INFO - SNR Treshold: 1
+2016-04-20 17:58:45,796 - INFO - Message Received
+2016-04-20 17:58:45,796 - INFO - Message_Tuple: ('This is the third message', 17)
+2016-04-20 17:59:58,751 - INFO - ---------------------------
+2016-04-20 17:59:58,751 - INFO - New Application Started
+2016-04-20 17:59:58,751 - INFO - ---------------------------
+2016-04-20 18:00:00,987 - INFO - SNR Threshold met
+2016-04-20 18:00:00,987 - INFO - SNR Treshold: 1
+2016-04-20 18:00:01,288 - INFO - Message Received
+2016-04-20 18:00:01,288 - INFO - Message_Tuple: ('This is the first message', 12)
+2016-04-20 18:00:01,793 - INFO - Message Sent
+2016-04-20 18:00:01,794 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 18:00:02,814 - INFO - SNR Threshold met
+2016-04-20 18:00:02,814 - INFO - SNR Treshold: 1
+2016-04-20 18:00:03,117 - INFO - Message Received
+2016-04-20 18:00:03,117 - INFO - Message_Tuple: ('This is the third message', 7)
+2016-04-20 18:00:28,998 - INFO - ---------------------------
+2016-04-20 18:00:28,998 - INFO - New Application Started
+2016-04-20 18:00:28,999 - INFO - ---------------------------
+2016-04-20 18:00:38,890 - INFO - SNR Threshold met
+2016-04-20 18:00:38,890 - INFO - SNR Treshold: 1
+2016-04-20 18:00:39,191 - INFO - Message Received
+2016-04-20 18:00:39,191 - INFO - Message_Tuple: ('This is the first message', 12)
+2016-04-20 18:00:39,698 - INFO - Message Sent
+2016-04-20 18:00:39,698 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 18:00:40,779 - INFO - SNR Threshold met
+2016-04-20 18:00:40,780 - INFO - SNR Treshold: 1
+2016-04-20 18:00:41,080 - INFO - Message Received
+2016-04-20 18:00:41,080 - INFO - Message_Tuple: ('This is the third message', 17)
+2016-04-20 18:04:05,698 - INFO - Amplitude has been set to: 0.5
+2016-04-20 18:04:05,703 - INFO - ---------------------------
+2016-04-20 18:04:05,703 - INFO - New Application Started
+2016-04-20 18:04:05,703 - INFO - ---------------------------
+2016-04-20 18:04:28,497 - INFO - Amplitude has been set to: 0.75
+2016-04-20 18:04:28,503 - INFO - ---------------------------
+2016-04-20 18:04:28,503 - INFO - New Application Started
+2016-04-20 18:04:28,503 - INFO - ---------------------------
+2016-04-20 18:07:36,030 - INFO - Amplitude has been set to: 0.75
+2016-04-20 18:07:36,035 - INFO - ---------------------------
+2016-04-20 18:07:36,035 - INFO - New Application Started
+2016-04-20 18:07:36,035 - INFO - ---------------------------
+2016-04-20 18:07:39,466 - INFO - SNR Threshold met
+2016-04-20 18:07:39,466 - INFO - SNR Treshold: 1
+2016-04-20 18:07:39,766 - INFO - Message Received
+2016-04-20 18:07:39,767 - INFO - Message_Tuple: ('This is the first message', 12)
+2016-04-20 18:07:40,569 - INFO - Message Sent
+2016-04-20 18:07:40,569 - INFO - Message: This is the second message    Amplitude: 0.75
+2016-04-20 18:07:41,988 - INFO - SNR Threshold met
+2016-04-20 18:07:41,988 - INFO - SNR Treshold: 1
+2016-04-20 18:07:42,291 - INFO - Message Received
+2016-04-20 18:07:42,291 - INFO - Message_Tuple: ('This is the third message', 9)
+2016-04-20 18:09:25,684 - INFO - Amplitude has been set to: 1
+2016-04-20 18:09:25,689 - INFO - ---------------------------
+2016-04-20 18:09:25,689 - INFO - New Application Started
+2016-04-20 18:09:25,690 - INFO - ---------------------------
+2016-04-20 18:09:28,961 - INFO - SNR Threshold met
+2016-04-20 18:09:28,961 - INFO - SNR Treshold: 1
+2016-04-20 18:09:29,265 - INFO - Message Received
+2016-04-20 18:09:29,265 - INFO - Message_Tuple: ('This is the third message', 15)
+2016-04-20 18:09:30,071 - INFO - Message Sent
+2016-04-20 18:09:30,071 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 18:09:35,572 - ERROR - Timeout! Message could not be received
+2016-04-20 18:10:09,911 - INFO - Amplitude has been set to: 1
+2016-04-20 18:10:09,917 - INFO - ---------------------------
+2016-04-20 18:10:09,917 - INFO - New Application Started
+2016-04-20 18:10:09,918 - INFO - ---------------------------
+2016-04-20 18:10:19,655 - INFO - SNR Threshold met
+2016-04-20 18:10:19,655 - INFO - SNR Treshold: 1
+2016-04-20 18:10:19,956 - INFO - Message Received
+2016-04-20 18:10:19,956 - INFO - Message_Tuple: ('This is the first message', 13)
+2016-04-20 18:10:20,758 - INFO - Message Sent
+2016-04-20 18:10:20,758 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 18:10:22,499 - INFO - SNR Threshold met
+2016-04-20 18:10:22,500 - INFO - SNR Treshold: 1
+2016-04-20 18:10:22,800 - INFO - Message Received
+2016-04-20 18:10:22,800 - INFO - Message_Tuple: ('This is the third message', 17)
+2016-04-20 18:10:45,548 - INFO - Amplitude has been set to: 0.75
+2016-04-20 18:10:45,553 - INFO - ---------------------------
+2016-04-20 18:10:45,553 - INFO - New Application Started
+2016-04-20 18:10:45,553 - INFO - ---------------------------
+2016-04-20 18:10:52,520 - INFO - SNR Threshold met
+2016-04-20 18:10:52,520 - INFO - SNR Treshold: 1
+2016-04-20 18:10:52,823 - INFO - Message Received
+2016-04-20 18:10:52,823 - INFO - Message_Tuple: ('This is the first message', 17)
+2016-04-20 18:10:53,628 - INFO - Message Sent
+2016-04-20 18:10:53,628 - INFO - Message: This is the second message    Amplitude: 0.75
+2016-04-20 18:10:55,234 - INFO - SNR Threshold met
+2016-04-20 18:10:55,235 - INFO - SNR Treshold: 1
+2016-04-20 18:10:55,539 - INFO - Message Received
+2016-04-20 18:10:55,539 - INFO - Message_Tuple: ('This is the third message', 17)
+2016-04-20 18:12:08,323 - INFO - Amplitude has been set to: 0.75
+2016-04-20 18:12:08,328 - INFO - ---------------------------
+2016-04-20 18:12:08,328 - INFO - New Application Started
+2016-04-20 18:12:08,330 - INFO - ---------------------------
+2016-04-20 18:12:14,672 - INFO - SNR Threshold met
+2016-04-20 18:12:14,672 - INFO - SNR Treshold: 2
+2016-04-20 18:12:53,813 - INFO - Amplitude has been set to: 0.75
+2016-04-20 18:12:53,818 - INFO - ---------------------------
+2016-04-20 18:12:53,818 - INFO - New Application Started
+2016-04-20 18:12:53,818 - INFO - ---------------------------
+2016-04-20 18:13:02,071 - INFO - SNR Threshold met
+2016-04-20 18:13:02,072 - INFO - SNR Treshold: 2
+2016-04-20 18:13:02,375 - INFO - Message Received
+2016-04-20 18:13:02,375 - INFO - Message_Tuple: ('This is the first message', 17)
+2016-04-20 18:13:03,185 - INFO - Message Sent
+2016-04-20 18:13:03,185 - INFO - Message: This is the second message    Amplitude: 0.75
+2016-04-20 18:13:08,690 - ERROR - Timeout! Message could not be received
+2016-04-20 18:13:39,364 - INFO - Amplitude has been set to: 0.75
+2016-04-20 18:13:39,369 - INFO - ---------------------------
+2016-04-20 18:13:39,369 - INFO - New Application Started
+2016-04-20 18:13:39,369 - INFO - ---------------------------
+2016-04-20 18:13:45,557 - INFO - SNR Threshold met
+2016-04-20 18:13:45,557 - INFO - SNR Treshold: 1
+2016-04-20 18:15:21,788 - INFO - Amplitude has been set to: 1
+2016-04-20 18:15:21,794 - INFO - ---------------------------
+2016-04-20 18:15:21,794 - INFO - New Application Started
+2016-04-20 18:15:21,795 - INFO - ---------------------------
+2016-04-20 18:15:25,098 - INFO - SNR Threshold met
+2016-04-20 18:15:25,098 - INFO - SNR Treshold: 1
+2016-04-20 18:17:18,749 - INFO - ---------------------------
+2016-04-20 18:17:18,749 - INFO - New Application Started
+2016-04-20 18:17:18,749 - INFO - ---------------------------
+2016-04-20 18:17:40,741 - INFO - ---------------------------
+2016-04-20 18:17:40,742 - INFO - New Application Started
+2016-04-20 18:17:40,742 - INFO - ---------------------------
+2016-04-20 18:17:45,381 - INFO - SNR Threshold met
+2016-04-20 18:17:45,381 - INFO - SNR Treshold: 1
+2016-04-20 18:17:45,681 - INFO - Message Received
+2016-04-20 18:17:45,681 - INFO - Message_Tuple: ('This is the first message', 9)
+2016-04-20 18:19:53,398 - INFO - Amplitude has been set to: 1
+2016-04-20 18:19:53,403 - INFO - ---------------------------
+2016-04-20 18:19:53,404 - INFO - New Application Started
+2016-04-20 18:19:53,406 - INFO - ---------------------------
+2016-04-20 18:19:56,588 - INFO - SNR Threshold met
+2016-04-20 18:19:56,588 - INFO - SNR Treshold: 1
+2016-04-20 18:21:11,730 - INFO - Amplitude has been set to: 1
+2016-04-20 18:21:11,735 - INFO - ---------------------------
+2016-04-20 18:21:11,735 - INFO - New Application Started
+2016-04-20 18:21:11,738 - INFO - ---------------------------
+2016-04-20 18:21:15,252 - INFO - SNR Threshold met
+2016-04-20 18:21:15,253 - INFO - SNR Treshold: 1
+2016-04-20 18:21:15,557 - INFO - Message Received
+2016-04-20 18:21:15,557 - INFO - Message_Tuple: ('This is the first message', 18)
+2016-04-20 18:21:16,359 - INFO - Message Sent
+2016-04-20 18:21:16,360 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 18:21:17,934 - INFO - SNR Threshold met
+2016-04-20 18:21:17,934 - INFO - SNR Treshold: 1
+2016-04-20 18:21:18,236 - INFO - Message Received
+2016-04-20 18:21:18,236 - INFO - Message_Tuple: ('This is the third message', 17)
+2016-04-20 18:22:13,281 - INFO - Amplitude has been set to: 1
+2016-04-20 18:22:13,287 - INFO - ---------------------------
+2016-04-20 18:22:13,287 - INFO - New Application Started
+2016-04-20 18:22:13,287 - INFO - ---------------------------
+2016-04-20 18:22:16,345 - INFO - SNR Threshold met
+2016-04-20 18:22:16,345 - INFO - SNR Treshold: 1
+2016-04-20 18:24:44,482 - INFO - Amplitude has been set to: 1
+2016-04-20 18:24:44,487 - INFO - ---------------------------
+2016-04-20 18:24:44,488 - INFO - New Application Started
+2016-04-20 18:24:44,488 - INFO - ---------------------------
+2016-04-20 18:24:47,568 - INFO - SNR Threshold met
+2016-04-20 18:24:47,568 - INFO - SNR Treshold: 1
+2016-04-20 18:25:43,278 - INFO - Amplitude has been set to: 1
+2016-04-20 18:25:43,283 - INFO - ---------------------------
+2016-04-20 18:25:43,284 - INFO - New Application Started
+2016-04-20 18:25:43,284 - INFO - ---------------------------
+2016-04-20 18:25:46,764 - INFO - SNR Threshold met
+2016-04-20 18:25:46,765 - INFO - SNR Treshold: 1
+2016-04-20 18:25:47,068 - INFO - Message Received
+2016-04-20 18:25:47,068 - INFO - Message_Tuple: ('This is the first message', 17)
+2016-04-20 18:25:47,877 - INFO - Message Sent
+2016-04-20 18:25:47,877 - INFO - Message: This is the second message    Amplitude: 1
+2016-04-20 18:25:53,380 - ERROR - Timeout! Message could not be received
+2016-04-20 18:27:06,945 - INFO - Amplitude has been set to: 1
+2016-04-20 18:27:06,950 - INFO - ---------------------------
+2016-04-20 18:27:06,950 - INFO - New Application Started
+2016-04-20 18:27:06,950 - INFO - ---------------------------
+2016-04-20 18:27:09,763 - INFO - SNR Threshold met
+2016-04-20 18:27:09,763 - INFO - SNR Treshold: 1
+2016-04-20 18:27:10,067 - INFO - Message Received
+2016-04-20 18:27:10,067 - INFO - Message_Tuple: ('This is the first message', 17)
+2016-04-20 18:27:10,869 - INFO - Message Sent
+2016-04-20 18:27:10,869 - INFO - Message: This is the second message    Amplitude: 1

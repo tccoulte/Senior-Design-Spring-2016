@@ -17,11 +17,11 @@ def increment_rx():
                                 disconnect_transmit = True)
     tb.start()
     snr_list = list()
-    threshold = 10
+    threshold = 1.0
     found_SNR_above_thresh = False
     snrMaxlist = []
     timeStart = time.time()
-    while time.time() - timeStart < 10:
+    while time.time() - timeStart < 20:
         snr = tb.SNR()
         if not math.isnan(float(snr)):
             snr_list.append(snr)
@@ -72,5 +72,5 @@ def standard_rx():
 
 
 if __name__ == "__main__":
-    standard_rx()
+    increment_rx()
     # CHOOSE TEST HERE
