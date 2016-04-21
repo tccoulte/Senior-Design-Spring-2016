@@ -32,8 +32,7 @@ class Senior_Design:
         self.GNU_Radio_Block.send_new_packet(message,repetition)
         self.set_state(class_state.TRANSMITTED)
         time.sleep(.3)
-        logging.info("Message Sent")
-        logging.info("Message: " + message + "    Amplitude: " + str(self.get_amplitude()))
+        logging.info("Message Sent: " + message + "  Amplitude: " + str(self.get_amplitude()))
 
     def receive_message(self,time_out,message = ''):
         try:
@@ -80,6 +79,9 @@ class Senior_Design:
         file_obj = open(self.read_file)
         lines =file_obj.read().splitlines()
         file_obj.close()
+        if  not lines:
+            logging.warning("File was empty")
+            return False
         message_tuple = ((Counter(lines)).most_common(1))[0]
         if message_tuple[1] > 4:
             if message == '':
@@ -92,7 +94,7 @@ class Senior_Design:
                 logging.info("Message Received")
                 logging.info("Message_Tuple: " + str(message_tuple))
                 return True
-        logging.warning("Message Not Received")
+        logging.warning("Message Not Properly")
         logging.info("Message_Tuple: " + str(message_tuple)) 
         return False
         
