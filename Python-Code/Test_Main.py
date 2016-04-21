@@ -3,7 +3,9 @@ import sys
 from Transmit_Receive_Blocks import Top_Block_Senior_Design
 from Senior_Design import Senior_Design
 from global_types import class_state,phone_state,station_state
+from collections import Counter
 import logging
+import re
 
 
 #////////////////////////////////////////////////////
@@ -76,7 +78,9 @@ def SNR_p():
     while not received_message and phone.get_amplitude() <= amp_max:
         message_to_send = ''.join([(phone.get_amplitude() + " ") for x in xrange(10)])
         phone.send_message(message_to_send,10)
+        time.sleep(.5)
         phone.receive_message(time_out = receive_time_out)
+        time.sleep(.5)
         if phone.get_state() == class_state.RECEIVED:
             received_message = True
         else:
@@ -85,10 +89,10 @@ def SNR_p():
         amplitude = parse_amplitude_message(phone.get_message())
         sys.exit("We got a response! The amplitude returned was: " +str(amplitude))
     else:
-        sys.exit("Amplitude got to the max :(")
+        sys.exit("Failed. See Log.")
 
 def increment_ampl(ampl, amount):
-    ample = ampl+amount
+    ampl = ampl+amount
     return ampl
 
 #////////////////////////////////////////////////////
@@ -119,17 +123,19 @@ def SNR_s():
     station.run()
     raw_input("Press Enter to continue...")
     station.receive_message(time_out = 20)
+    time.sleep(.5)
     if station.get_state() != class_state.RECEIVED:
         sys.exit("Fail!")
-    amplitude = parse_amplitude_message(phone.get_message())
+    amplitude = float((parse_amplitude_message(phone.get_message()))
     print "parsed amplitude is: " + str(amplitude)
     message_to_send = ''.join([(amplitude + " ") for x in xrange(10)])
-    phone.send_message(message_to_send,10)
+    phone.send_message(message_to_send,20)
+    time.sleep(.5)
        
 ########## USEFUL FUNCTIONS #############
 
 def parse_amplitude_message(message):
-    pass
+     return (Counter(re.findall(r"[-+]?\d*\.\d+|\d+", message)).most_common(1))[0][0]
 
 ############# MAIN ######################
 
