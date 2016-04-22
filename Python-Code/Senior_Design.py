@@ -42,7 +42,7 @@ class Senior_Design:
                 self.poll_SNR(self.SNR_threshold)
                 logging.info("SNR Threshold met")
                 logging.info ("SNR Treshold: " + str(self.get_SNR_threshold()))
-                time.sleep(.3)
+                time.sleep(.7)
                 if self.verify_transmission(message):
                     self.set_state(class_state.RECEIVED)
                 else:

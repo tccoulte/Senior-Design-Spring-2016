@@ -67,32 +67,30 @@ def back_and_forth_p():
     sys.exit("COMPLETED SUCCESSFULLY")
 
 def SNR_p():
-    amp_max = 1
-    amp_increment = .1
-    receive_time_out = .8
+    amp_min = .2
+    amp_increment = .2
+    received_message = True
     phone = Senior_Design(file_sink = 'file_sink', file_source= 'file_source', SNR_threshold = 4)
-    phone.set_amplitude(.1)
     phone.run()
     raw_input("Press Enter to continue...")
-    received_message = False
-    while not received_message and phone.get_amplitude() <= amp_max:
-        message_to_send = ''.join([(phone.get_amplitude() + " ") for x in xrange(10)])
-        phone.send_message(message_to_send,10)
-        time.sleep(.5)
-        phone.receive_message(time_out = receive_time_out)
-        time.sleep(.5)
+    phone.set_amplitdue(1)
+    while received_message and phone.get_amplitude() <= amp_min:
+        #message_to_send = ''.join([(phone.get_amplitude() + " ") for x in xrange(10)])
+        message_to_send = "Fuck this project"
+        phone.send_message(message_to_send,20)
+        phone.receive_message(time_out = 4)
         if phone.get_state() == class_state.RECEIVED:
-            received_message = True
+            if phone.get_message == "The message was received":
+                phone.set_amplitdue(decrement_ampl(amp_increment))
+            elif phone.get_message == "not received not received":
+                sys.exit("worked")
+            else:
+                sys.exit("recieved message not expected")
         else:
-            phone.set_amplitdue(increment_ampl(amp_increment))
-    if phone.get_state() == class_state.RECEIVED:
-        amplitude = parse_amplitude_message(phone.get_message())
-        sys.exit("We got a response! The amplitude returned was: " +str(amplitude))
-    else:
-        sys.exit("Failed. See Log.")
+            sys.exit("failed")
 
-def increment_ampl(ampl, amount):
-    ampl = ampl+amount
+def decrement_ampl(ampl, amount):
+    ample = ampl-amount
     return ampl
 
 #////////////////////////////////////////////////////
@@ -102,7 +100,7 @@ def increment_ampl(ampl, amount):
 
 def back_and_forth_s():
     amplitude = 1
-    station = Senior_Design(file_sink = 'file_sink', file_source= 'file_source', SNR_threshold = 1)
+    station = Senior_Design(file_sink = 'file_sink', file_source= 'file_source', SNR_threshold = 4)
     station.set_amplitude(amplitude)
     station.run()
     raw_input("Press Enter to continue...")
@@ -112,25 +110,28 @@ def back_and_forth_s():
         sys.exit("message 1 not Received at Station")
     station.send_message("This is the second message", 20)
     time.sleep(.5)
-    station.receive_message(time_out = 5)
+    station.receive_message(time_out = 3)
+    time.sleep(.3)
     if station.get_state() != class_state.RECEIVED:
         sys.exit("message 3 not Received at Station")
     sys.exit("COMPLETED SUCCESSFULLY")
 
 def SNR_s():
     station = Senior_Design(file_sink = 'file_sink', file_source= 'file_source', SNR_threshold = 4)
-    station.set_amplitude(1)
     station.run()
     raw_input("Press Enter to continue...")
-    station.receive_message(time_out = 20)
-    time.sleep(.5)
-    if station.get_state() != class_state.RECEIVED:
-        sys.exit("Fail!")
-    amplitude = float((parse_amplitude_message(phone.get_message()))
-    print "parsed amplitude is: " + str(amplitude)
-    message_to_send = ''.join([(amplitude + " ") for x in xrange(10)])
-    phone.send_message(message_to_send,20)
-    time.sleep(.5)
+    station.set_amplitude(1)
+    received_message = True
+    while received_message:
+        station.receive_message(time_out = 3)
+        time.sleep(.5)
+        if station.get_state() != class_state.RECEIVED:
+            received_message = False
+            station.send_message("not received not received",20)
+            time.sleep(.5)
+        else:
+            station.send_message("The message was received",20)
+            time.sleep(.5)
        
 ########## USEFUL FUNCTIONS #############
 
@@ -144,6 +145,6 @@ if __name__ == '__main__':
         level=logging.DEBUG,format='%(asctime)s - %(levelname)s - %(message)s')
     # add filemode = 'w' if you want to overwrite log file
     #Call Test
-    back_and_forth_s()
+    SNR_s()
     logging.info("Application Finished")
 

@@ -403,7 +403,7 @@ class receive_path(gr.hier_block2):
 			verbose=False,
 			log=False)
 
-		self.digital_mpsk_snr_est_cc_0 = digital.mpsk_snr_est_cc(2, 10000, 0.0001)
+		self.digital_mpsk_snr_est_cc_0 = digital.mpsk_snr_est_cc(2, 10000, 0.001)
 
 		self.blocks_multiply_const_vxx_0 = blocks.multiply_const_vcc((ampl, ))
 
