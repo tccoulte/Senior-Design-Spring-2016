@@ -31,10 +31,10 @@ class Senior_Design:
         """Sends new message with specified repetition"""
         self.GNU_Radio_Block.send_new_packet(message,repetition)
         self.set_state(class_state.TRANSMITTED)
-        time.sleep(.3)
+        #time.sleep(.5)
         logging.info("Message Sent: " + message + "  Amplitude: " + str(self.get_amplitude()))
 
-    def receive_message(self,time_out,message = ''):
+    def receive_message(self,time_out,message = '', number_correct = 5):
         try:
             with Timeout(time_out):
                 self.GNU_Radio_Block.set_transmit(False)
@@ -42,8 +42,8 @@ class Senior_Design:
                 self.poll_SNR(self.SNR_threshold)
                 logging.info("SNR Threshold met")
                 logging.info ("SNR Treshold: " + str(self.get_SNR_threshold()))
-                time.sleep(.7)
-                if self.verify_transmission(message):
+                time.sleep(.5)
+                if self.verify_transmission(message, number_correct):
                     self.set_state(class_state.RECEIVED)
                 else:
                     self.set_state(class_state.NOT_RECEIVED)
@@ -75,7 +75,7 @@ class Senior_Design:
                 snr_list = []
             
 
-    def verify_transmission(self,message):
+    def verify_transmission(self,message, number_correct):
         file_obj = open(self.read_file)
         lines =file_obj.read().splitlines()
         file_obj.close()
@@ -83,7 +83,7 @@ class Senior_Design:
             logging.warning("File was empty")
             return False
         message_tuple = ((Counter(lines)).most_common(1))[0]
-        if message_tuple[1] > 4:
+        if message_tuple[1] > number_correct - 1:
             if message == '':
                 self.current_message = message_tuple[0]
                 logging.info("Message Received")
